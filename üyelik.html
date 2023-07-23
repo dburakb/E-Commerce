@@ -1,44 +1,71 @@
 <!DOCTYPE html>
 |<html>
     <head>
-        <meta name="viewport" content="width=device-width,
-        initial-scale=1.0">
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>My Creation</title>
+        <link SameSite="None" rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
         <title>MyCreation Üyelik ve Giriş Yapma Formu</title>
         <link rel="stylesheet" type="text/css" href="üyelik.css">
     </head>
     <body>
 
-        <div class="container">
-            <div class="box signin">
-                <h2>Zaten Hesabın Var Mı?</h2>
-                <button class="signinBtn">Giriş Yap</button>
+        <section id="header">
+            <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
+        
+            <div>
+                <ul id="navbar">
+                    <li><a href="index.html">Ana Sayfa</a></li>
+                    <li><a href="shop.html">Alışveriş</a></li>
+                    <li><a href="blog.html">Kombin</a></li>
+                    <li><a href="üyelik.html">Üyelik ve Giriş</a></li>
+                    <li><a class="active" href="about.html">Hakkımızda</a></li>
+                    <li><a href="contact.html">İletişim</a></li>
+                    <li id="lg-bag"><a href="cart.html"><i class="far fa-shopping-bag"></i></a></li>
+                    <a href="#" id="close"><i class="far fa-times"></i></a>
+                </ul>
             </div>
-            <div class="box signup">
-                <h2>Hesabın Yok Mu?</h2>
-                <button class="signupBtn">Üye Ol</button>
+            <div id="mobile">
+                <a href="cart.html"><i class="far fa-shopping-bag"></i></a>
+                <i id="bar" class="fas fa-outdent"></i>
             </div>
-        </div>
-        <div class="formBx">
-            <div class="form signinform">
-                <form>
-                    <h3>Giriş Yap</h3>
-                    <input type="text" placeholder="Kullanıcı Adı">
-                    <input type="password" placeholder="Şifre">
-                    <input type="submit" value="Giriş Yap">
-                    <a href="#" class="forgot">Şifremi Unuttum</a>
-                </form>
-            </div>
-            <div class="form signupform">
-                <form>
-                    <h3>Üye Ol</h3>
-                    <input type="text" placeholder="Kullanıcı Adı">
-                    <input type="text" placeholder="E-Mail Adresiniz">
-                    <input type="password" placeholder="Şifre">
-                    <input type="password" placeholder="Onayla">
-                    <input type="submit" value="Üye Ol">
-                        </form>
-                    </div>
+        </section>
+        <div id="d">
+            
+            <div class="container">
+                <div class="box signin">
+                    <h2>Zaten Hesabın Var Mı?</h2>
+                    <button class="signinBtn">Giriş Yap</button>
                 </div>
+                <div class="box signup">
+                    <h2>Hesabın Yok Mu?</h2>
+                    <button class="signupBtn">Üye Ol</button>
+                </div>
+            </div>
+            <div class="formBx">
+                <div class="form signinform">
+                    <form>
+                        <h3>Giriş Yap</h3>
+                        <input type="text" placeholder="Kullanıcı Adı">
+                        <input type="password" placeholder="Şifre">
+                        <input type="submit" value="Giriş Yap">
+                        <a href="#" class="forgot">Şifremi Unuttum</a>
+                    </form>
+                </div>
+                <div class="form signupform">
+                    <form>
+                        <h3>Üye Ol</h3>
+                        <input type="text" placeholder="Kullanıcı Adı">
+                        <input type="text" placeholder="E-Mail Adresiniz">
+                        <input type="password" placeholder="Şifre">
+                        <input type="password" placeholder="Onayla">
+                        <input type="submit" value="Üye Ol">
+                            </form>
+                        </div>
+                    </div>
+            </div>
+
             <script>
                 let signinBtn = document.querySelector('.signinBtn');
                 let signupBtn = document.querySelector('.signupBtn');
