@@ -12,6 +12,11 @@ html {
 
 /* Global Styles */
 
+.logo{
+    width: 64px;
+    height: 64px;
+}
+
 h1 {
   font-size: 50px;
   line-height: 64px;
