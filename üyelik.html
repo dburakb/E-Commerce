@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+|<html>
+    <head>
+        <meta name="viewport" content="width=device-width,
+        initial-scale=1.0">
+        <title>MyCreation Üyelik ve Giriş Yapma Formu</title>
+        <link rel="stylesheet" type="text/css" href="üyelik.css">
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="box signin">
+                <h2>Zaten Hesabın Var Mı?</h2>
+                <button class="signinBtn">Giriş Yap</button>
+            </div>
+            <div class="box signup">
+                <h2>Hesabın Yok Mu?</h2>
+                <button class="signupBtn">Üye Ol</button>
+            </div>
+        </div>
+        <div class="formBx">
+            <div class="form signinform">
+                <form>
+                    <h3>Giriş Yap</h3>
+                    <input type="text" placeholder="Kullanıcı Adı">
+                    <input type="password" placeholder="Şifre">
+                    <input type="submit" value="Giriş Yap">
+                    <a href="#" class="forgot">Şifremi Unuttum</a>
+                </form>
+            </div>
+            <div class="form signupform">
+                <form>
+                    <h3>Üye Ol</h3>
+                    <input type="text" placeholder="Kullanıcı Adı">
+                    <input type="text" placeholder="E-Mail Adresiniz">
+                    <input type="password" placeholder="Şifre">
+                    <input type="password" placeholder="Onayla">
+                    <input type="submit" value="Üye Ol">
+                        </form>
+                    </div>
+                </div>
+            <script>
+                let signinBtn = document.querySelector('.signinBtn');
+                let signupBtn = document.querySelector('.signupBtn');
+                let body = document.querySelector('body');
+            
+                signupBtn.onclick = function () {
+                body.classList.add('slide');
+                }
+            
+                signinBtn.onclick = function () {
+                body.classList.remove('slide');
+                }
+            </script>
+        </body>
+    </html>
