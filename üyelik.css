@@ -77,7 +77,7 @@
 }
 .slide
 {
-    background: #f43648;
+    background: #772c34;
 }
 .container
 {
@@ -86,6 +86,8 @@
     flex-direction: row;
     width: 800px;
     height: 400px;
+    left: 400px;
+    top: 400px;
     background: rgba(0,0,0,0.125);
 }
 .container .box
@@ -98,7 +100,7 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 40px;
+    padding: 10px;
 }
 .container .box h2
 {
@@ -125,7 +127,7 @@
     left: 400px;
     width: 350px;
     height: 480px;
-    background: #fff;
+    background: #755656;
     z-index: 1000;
     box-shadow: 0 5px 25px rgba(0,0,0,0.15);
     transition: 0.5s;
@@ -147,7 +149,7 @@
     justify-content: center;
     align-items: center;
     transition: 0.5s;
-    background: #fff;
+    background: #ffffff;
 }
 .formBx .form.signupform
 {
