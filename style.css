@@ -1343,3 +1343,139 @@ footer .copyright{
     }
 }
 
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 20px;
+    width: 100%;
+}
+
+.select-container {
+    margin: 5px;
+}
+
+.kategori1 {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #666;
+}
+.kategori2 {
+    display: block;
+    font-size: 18px;
+    margin-bottom: 8px;
+    color: #666;
+}
+
+select {
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+    font-size: 16px;
+    margin-bottom: 16px;
+    background-color: #fff;
+    color: #333;
+    outline: none;
+}
+
+select:hover {
+    border-color: #e74c3c;
+}
+
+select:focus {
+    border-color: #e74c3c;
+    box-shadow: 0 0 8px #e74c3c;
+}
+
+.add-button {
+    padding: 12px 24px;
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.add-button:hover {
+    background-color: #2980b9;
+}
+
+.favorite-button {
+    padding: 12px 24px;
+    background-color: #2ecc71;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    margin: 5px;
+}
+
+.favorite-button:hover {
+    background-color: #27ae60;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+}
+
+.categories {
+    width: 40%;
+    padding: 10px;
+    margin-right: 10px;
+    background-color: #fff;
+    border: 2px  #9d969c;
+    border-radius: 8px;
+}
+
+.categories h2 {
+    background-color: #494848;
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 8px 8px 0 0;
+    color: #fff;
+}
+
+.categories ul {
+    padding: 0;
+}
+
+.categories li {
+    list-style: none;
+    margin-bottom: 5px;
+}
+
+.favorites {
+    width: 40%;
+    padding: 10px;
+    background-color: #494848;
+    color: #fff;
+    border-radius: 8px;
+    position: relative;
+}
+
+.favorites h2 {
+    color: #fff;
+    padding: 10px;
+    margin-top: 0;
+    border-radius: 8px 8px 0 0;
+}
+
+.favorites ul {
+    padding: 0;
+}
+
+.favorites li {
+    list-style: none;
+    margin-bottom: 5px;
+}

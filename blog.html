@@ -8,8 +8,10 @@
     <title>My Creation</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
     <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+
 
 <section id="header">
     <a href="#"><img src="img/logo.png" class="logo" alt=""></a>
@@ -36,13 +38,60 @@
     <h2>#ayakiziniazalt</h2>
     <p>Kombinizin karbonunu ürünlerimizle sıfırlayın!</p>
 </section>
+<section id="header123">
+    <div class="container">
+        <div class="select-container">
+            <label for="kategori1">Ürün Türünü Seçin:</label>
+            <select id="kategori1">
+                <option value="T-Shirt">T-Shirt</option>
+                <option value="Gömlek">Gömlek</option>
+                <option value="Kazak">Kazak</option>
+                <option value="Hırka">Hırka</option>
+                <option value="Sweatshirt-Hoodie">Sweatshirt-Hoodie</option>
+                <option value="Ceket">Ceket</option>
+                <option value="Bluz">Bluz</option>
+                <option value="Elbise">Elbise</option>
+                <option value="Pantolon">Pantolon</option>
+                <option value="Etek">Etek</option>
+                <option value="Tayt-Eşofman">Tayt-Eşofman</option>
+            </select>
+        </div>
 
+        <div class="select-container">
+            <label for="kategori2">Ürün Rengini Seçin:</label>
+            <select id="kategori2">
+                <option value="Mavi">Mavi</option>
+                <option value="Kırmızı">Kırmızı</option>
+                <option value="Sarı">Sarı</option>
+                <option value="Yeşil">Yeşil</option>
+                <option value="Pembe">Pembe</option>
+                <option value="Mor">Mor</option>                
+                <option value="Turuncu">Turuncu</option>
+                <option value="Kahverengi">Kahverengi</option>
+                <option value="Siyah">Siyah</option>
+                <option value="Beyaz">Beyaz</option>
+            </select>
+        </div>
 
+        <button onclick="filterProducts()" class="add-button">Filtrele</button>
+        <button class="favorite-button" onclick="favoriEkle()">Gardırobuma Ekle</button>
+    </div>
 
+    <div class="main-container">
+        <div class="categories" id="productContainer">
+
+        </div>
+
+        <div class="favorites" id="favoriler">
+            <h2>Gardırobum</h2>
+            <ul>
+            </ul>
+        </div>
+    </div>
 <section id="newsletter" class="section-p1 section-m1">
     <div class="newstext">
-        <h4>Bültene Abone Ol</h4>
-        <p>Yeni sürdürülebilir ürünlerimiz ve <span>özel tekliflerimizden</span> haberdar olun.</p>
+        <h4>En yeni haberler için abone ol</h4>
+        <p>Yeni sürdürülebilir ürünlerimiz ve <span>özel tekliflerden</span> haberdar olun.</p>
     </div>
     <div class="form">
         <input type="text" placeholder="Your e-mail address">
@@ -99,7 +148,73 @@
     </div>
 </footer>
 
-<script src="script.js"></script>
+<script>
+    function filterProducts() {
+  const selectedTag = document.getElementById("kategori2").value;
+  const filteredProducts = products.filter((product) => product.tags.includes(selectedTag));
+
+  displayProducts(filteredProducts);
+}
+function displayProducts(productsToShow) {
+  const productContainer = document.getElementById("productContainer");
+  productContainer.innerHTML = ""; 
+
+  productsToShow.forEach((product) => {
+    const productElement = document.createElement("div");
+    const imageElement = document.createElement("img");
+    imageElement.src = product.image;
+    productElement.appendChild(imageElement);
+
+    productContainer.appendChild(productElement);
+  });
+}
+            var favorilereEklenenler = [];
+
+function favoriEkle() {
+    var favoriListesi = document.getElementById("favoriler").getElementsByTagName("ul")[0];
+    var kategori1Secim = document.getElementById("kategori1").value;
+    var kategori2Secim = document.getElementById("kategori2").value;
+    var urun = kategori1Secim + " - " + kategori2Secim;
+
+    if (favorilereEklenenler.indexOf(urun) === -1) {
+        favorilereEklenenler.push(urun);
+        var favoriLi = document.createElement("li");
+        favoriLi.textContent = urun;
+        favoriListesi.appendChild(favoriLi);
+        console.log("Favorilere Eklendi: " + urun);
+    } else {
+        console.log("Ürün Zaten Favorilere Ekli: " + urun);
+    }
+}
+const products = [
+  {
+    name: "Ürün 1",
+    image: "img/products/çanta1.jpg",
+    tags: ["Siyah","Kahverengi","Yeşil","Beyaz"],
+  },
+  {
+    name: "Ürün 2",
+    image: "img/products/çanta2.jpg",
+    tags: ["Mavi","Siyah","Beyaz"],
+  },
+  {
+    name: "Ürün 3",
+    image: "img/products/çanta3.jpg",
+    tags: ["Kırmızı","Mor","Mavi","Pembe","Beyaz"],
+  },
+  {
+    name: "Ürün 4",
+    image: "img/products/şapka1.jpg",
+    tags: ["Kırmızı","Mor","Pembe","Beyaz","Yeşil"],
+  },
+  {
+  name: "Ürün 5",
+    image: "img/products/şapka2.jpg",
+    tags: ["Kırmızı","Turuncu","Mavi","Beyaz","Yeşil","Sarı"],
+  },
+
+];
+</script>
 </body>
 
 </html>
